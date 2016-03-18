@@ -1,0 +1,50 @@
+*,body{margin: 0;padding: 0;}
+li{list-style: none;}
+.cf{zoom:1} 
+.cf:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.fl{float: left;display: inline-block;}
+.red{border:1px solid #f00 }
+.blue{border:1px solid #0f0 }
+.pd20{padding: 20px;margin: 20px 0;}
+.flex-li01{width: 110px;height: 120px;}
+.flex-li02{width: 110px;height: 100px;}
+.flex-li03{width: 110px;height: 40px;}
+.flex-li04{width: 110px;height: 200px;}
+
+
+@media (min-width:640px) {
+	.flex-ul{
+	    display: -webkit-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-justify-content:space-around;
+	        -ms-flex-pack:distribute;
+	            justify-content:space-around;//决定主轴的对齐方式
+	    -webkit-box-align: center;
+	    -webkit-align-items: center;
+	        -ms-flex-align: center;
+	            -webkit-box-align: center;
+	            align-items: center;
+	    -webkit-flex-flow: row wrap;
+	        -ms-flex-flow: row wrap;
+	            flex-flow: row wrap;//flex-flow属性是同时设定“flex-direction(伸缩流的方向)”和“flex-wrap（伸缩行换行）”属性的缩写，
+		
+
+	}
+}
+@media (max-width:640px) {
+	.flex-ul{
+	    display: -webkit-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	            justify-content:space-between;//决定主轴的对齐方式
+	    -webkit-flex-flow: row wrap;
+	        -ms-flex-flow: row wrap;
+	            -webkit-flex-flow: row wrap;
+	                flex-flow: row wrap;//flex-flow属性是同时设定“flex-direction(伸缩流的方向)”和“flex-wrap（伸缩行换行）”属性的缩写，
+		
+	}
+	.flex-li04{-webkit-box-ordinal-group:0;-webkit-order:-1;-ms-flex-order:-1;order:-1;}
+}
